@@ -22,7 +22,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/blackview/N6000/device.mk)
 
 PRODUCT_DEVICE := N6000
-PRODUCT_NAME := omni_N6000
+PRODUCT_NAME := twrp_N6000
 PRODUCT_BRAND := Blackview
 PRODUCT_MODEL := N6000
 PRODUCT_MANUFACTURER := blackview
