@@ -47,8 +47,7 @@ jobs:
         git config --global user.name "SKOCHE"
         git config --global user.email "sergey.kochetkoff@yandex.ru"
         repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
-      id: pwd
-      
+        
     - name: Repo Sync
       run: |
         repo sync -j$(nproc --all) --force-sync
