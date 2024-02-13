@@ -35,6 +35,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock.recovery \
     android.hardware.fastboot@1.0-impl-mtk \
     fastbootd
+	
+# Keystore2
+PRODUCT_PACKAGES += \
+    android.system.keystore2	
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
