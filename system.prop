@@ -12,7 +12,6 @@ ro.vendor.mtk_svp_on_mtee_support=2
 
 # Gatekeeper
 ro.hardware.gatekeeper=trustkernel
-ro.hardware.kmsetkey=trustkernel
 
 # Platform
 ro.vendor.mediatek.platform=MT6789
