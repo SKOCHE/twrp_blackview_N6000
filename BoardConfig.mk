@@ -73,10 +73,10 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-BOARD_SUPER_PARTITION_SIZE := 9126805504
+BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := blackview_dynamic_partitions
 BOARD_BLACKVIEW_DYNAMIC_PARTITIONS_PARTITION_LIST := system product vendor vendor_dlkm odm odm_dlkm
-BOARD_BLACKVIEW_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB
+BOARD_BLACKVIEW_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
@@ -97,8 +97,6 @@ TARGET_COPY_OUT_PRODUCT := product
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-# From lopestom -- vendor_dlkm & odm_dlkm partition
-# Reference: https://source.android.com/docs/core/architecture/partitions/vendor-odm-dlkm-partition#build-support
 # Build a separate vendor_dlkm partition
 BOARD_USES_VENDOR_DLKMIMAGE := true
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
