@@ -1,4 +1,5 @@
-import /trustkernel.rc
+import /init.recovery.trustkernel.rc
+
 import /init.recovery.project.rc
 
 on init
