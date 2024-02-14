@@ -1,8 +1,4 @@
-# Fstab
-ro.postinstall.fstab.prefix=/system
-
-ro.vendor.build.fingerprint=Blackview/N6000_RU/N6000:12/SP1A.210812.016/1703064338:user/release-keys
-
+# feat by lopestom
 # USB MTP
 ro.sys.usb.storage.type=mtp
 
@@ -10,9 +6,13 @@ ro.sys.usb.storage.type=mtp
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # TEE
-ro.tee_support=1
-ro.mtk_trustkernel_tee_support=1
-ro.mtk_tee_check_support=1
+
+ro.vendor.mtk_trustkernel_tee_support=1
+ro.vendor.mtk_svp_on_mtee_support=2
 
 # Gatekeeper
 ro.hardware.gatekeeper=trustkernel
+ro.hardware.kmsetkey=trustkernel
+
+# Platform
+ro.vendor.mediatek.platform=MT6789
