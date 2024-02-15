@@ -66,6 +66,13 @@ service wait_for_keymaster /system/bin/wait_for_keymaster
     priority -20
     ioprio rt 0
     seclabel u:r:recovery:s0
+	
+service keystore2 /system/bin/keystore2 /data/misc/keystore
+    class early_hal
+    user keystore
+    group keystore readproc log
+    task_profiles ProcessCapacityHigh
+    seclabel u:r:recovery:s0	
 
 service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
