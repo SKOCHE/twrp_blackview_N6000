@@ -77,7 +77,8 @@ service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-ser
 
 service vendor.keymint-trustkernel /vendor/bin/hw/android.hardware.security.keymint-service.trustkernel
     class early_hal
-    user nobody
+    user system
+    group system
     seclabel u:r:recovery:s0
 	
 
