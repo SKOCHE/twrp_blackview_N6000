@@ -67,12 +67,6 @@ service wait_for_keymaster /system/bin/wait_for_keymaster
     ioprio rt 0
     seclabel u:r:recovery:s0
 	
-service keystore2 /system/bin/keystore2 /data/misc/keystore
-    class early_hal
-    user keystore
-    group keystore readproc log
-    task_profiles ProcessCapacityHigh
-    seclabel u:r:recovery:s0	
 
 service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
@@ -81,18 +75,12 @@ service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-ser
     disabled
     seclabel u:r:recovery:s0
 
-service vendor.keymint-trustkernel /system/bin/hw/android.hardware.security.keymint-service.trustkernel
+service vendor.keymint-trustkernel /vendor/bin/hw/android.hardware.security.keymint-service.trustkernel
     class early_hal
     user nobody
     seclabel u:r:recovery:s0
 	
-service keymaster_attestation-1-1 /system/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
-    interface vendor.mediatek.hardware.keymaster_attestation@1.0::IKeymasterDevice default
-    interface vendor.mediatek.hardware.keymaster_attestation@1.1::IKeymasterDevice default
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0	
+
 
 on property:crypto.ready=1
     start vendor.keymint-trustkernel
@@ -100,31 +88,31 @@ on property:crypto.ready=1
 on property:hwservicemanager.ready=true
     start vendor.keymint-trustkernel
     start vendor.gatekeeper-1-0
-    start keymaster_attestation-1-1
+
 	
 on property:ro.crypto.state=unsupported
     stop teei_daemon
     stop vendor.keymint-trustkernel
     stop vendor.gatekeeper-1-0
-    stop keymaster_attestation-1-1
+
 	
 on property:ro.crypto.state=unencrypted
     stop teei_daemon
     stop vendor.keymint-trustkernel
     stop vendor.gatekeeper-1-0
-    stop keymaster_attestation-1-1
+
 	
 on property:twrp.decrypt.done=true
     stop teei_daemon
     stop vendor.keymint-trustkernel
     stop vendor.gatekeeper-1-0
-    stop keymaster_attestation-1-1
+
 	
 on property:crypto.ready=0
     stop teei_daemon
     stop vendor.keymint-trustkernel
     stop vendor.gatekeeper-1-0
-    stop keymaster_attestation-1-1
+
 
 on property:twrp.modules.loaded=true
     start vibratorfeature-hal-service
