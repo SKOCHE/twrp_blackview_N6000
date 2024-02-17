@@ -159,6 +159,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/vendor.prop
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
