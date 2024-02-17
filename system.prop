@@ -16,3 +16,13 @@ ro.vendor.customer_logpath=/data
 # snapshot
 ro.virtual_ab.userspace.snapshots.enabled=true
 init.userspace_reboot.is_supported=true
+# Default properties
+ro.hardware=mt6789
+ro.boot.hardware=mt6789
+# Recovery specific properties
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+persist.service.adb.enable=1
+persist.service.debuggable=1
