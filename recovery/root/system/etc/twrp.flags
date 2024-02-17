@@ -1,4 +1,4 @@
-
+#fstab file by SkoL
 #<mnt_point>        <type>    <device>      <device2>      <mnt_flags and options>
 /metadata           ext4      /dev/block/by-name/metadata      flags=display="metadata";backup=1
 /data               f2fs      /dev/block/by-name/userdata      flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity
@@ -55,21 +55,6 @@
 # External-Devices (SDCARD | OTG)
 /external_sd    auto     /dev/block/mmcblk0p1  /dev/block/mmcblk0     flags=display="Micro_SDcard";storage;wipeingui;removable;fsflags="utf8"
 /usbotg         auto     /dev/block/sdd1       /dev/block/sdd         flags=display="Usb_Otg";storage;wipeingui;removable;fsflags="utf8"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ##  from lopestom help -- 20230822
