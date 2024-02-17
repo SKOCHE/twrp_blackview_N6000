@@ -12,6 +12,7 @@ ro.build.custom_int_version=TE305_DK_DK050_6789_T0_RU_V1.1.5_S231220
 ro.build.custom_version=N6000_S1_231220
 ro.internal.version=TE305_DK_DK050_6789_T0_RU_V1.1.5_S231220
 ro.mtk_tee_check_support=1
+ro.vendor.customer_logpath=/data
 # snapshot
 ro.virtual_ab.userspace.snapshots.enabled=true
 init.userspace_reboot.is_supported=true
