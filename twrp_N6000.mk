@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Configure launch_with_vendor_ramdisk.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
+# Configure emulated_storage.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Configure twrp config common.mk
 $(call inherit-product, vendor/twrp/config/common.mk)
 
@@ -38,6 +41,7 @@ PRODUCT_MANUFACTURER := Blackview
 
 PRODUCT_GMS_CLIENTID_BASE := android-blackview
 
-#ro.build.description=hal_mgvi_64_armv82-user 12 SP1A.210812.016 1689855690 release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="hal_mgvi_64_armv82-user 12 SP1A.210812.016 1703064338 release-keys"
 
-#fingerprint=Blackview/N6000_RU/N6000:12/SP1A.210812.016/1689855690:user/release-keys
+BUILD_FINGERPRINT := Blackview/N6000_RU/N6000:12/SP1A.210812.016/1703064338:user/release-keys

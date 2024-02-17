@@ -18,13 +18,11 @@ LOCAL_PATH := device/blackview/N6000
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 31
-PRODUCT_TARGET_VNDK_VERSION := 32
+PRODUCT_TARGET_VNDK_VERSION := 31
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Enable project quotas and casefolding for emulated storage without sdcardfs - SDCard replacement functionality
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
@@ -56,13 +54,13 @@ PRODUCT_PACKAGES += \
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/mtk_plpath_utils \
-    FILESYSTEM_TYPE_system=erofs \
+    FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_vendor=true \
     POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=erofs \
+    FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
 # Boot control HAL - Bootctrl
