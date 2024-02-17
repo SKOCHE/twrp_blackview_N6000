@@ -172,7 +172,7 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRPAPP := true
 # Screen density
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 240
 
 # Resolution
 TW_THEME := portrait_hdpi
@@ -181,8 +181,7 @@ TARGET_SCREEN_HEIGHT := 2408
 
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_NO_SCREEN_BLANK := true						  
+					  
 TW_BACKUP_EXCLUSIONS := /data/fonts/files							 
 
 # Treble
