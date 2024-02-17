@@ -12,3 +12,6 @@ odm_dlkm /odm_dlkm ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 /dev/block/by-name/misc /misc emmc defaults defaults
 /dev/block/by-name/boot /boot emmc defaults first_stage_mount,nofail,slotselect
+
+/dev/block/by-name/apusys1 /apusys1 emmc defaults defaults
+/dev/block/by-name/apusys2 /apusys2 emmc defaults defaults
