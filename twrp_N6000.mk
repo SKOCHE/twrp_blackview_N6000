@@ -38,6 +38,6 @@ PRODUCT_MANUFACTURER := Blackview
 
 PRODUCT_GMS_CLIENTID_BASE := android-blackview
 
-#ro.build.description=hal_mgvi_64_armv82-user 12 SP1A.210812.016 1689855690 release-keys
+#ro.build.description=hal_mgvi_64_armv82-user 12 SP1A.210812.016 1703064338 release-keys
 
-#fingerprint=Blackview/N6000_RU/N6000:12/SP1A.210812.016/1689855690:user/release-keys
+#fingerprint=Blackview/N6000_RU/N6000:12/SP1A.210812.016/1703064338:user/release-keys
