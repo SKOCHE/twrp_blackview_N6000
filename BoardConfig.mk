@@ -169,7 +169,7 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_APEX := true
 
 # Screen density
-TARGET_SCREEN_DENSITY := 240
+TARGET_SCREEN_DENSITY := 480
 
 # Resolution
 TW_THEME := portrait_hdpi
