@@ -1,14 +1,33 @@
-ro.build.description=sys_mssi_64_cn_armv82-user 13 TP1A.220624.014 1703064338 release-keys
-ro.sys.usb.storage.type=mtp
-ro.mediatek.version.branch=alps-mp-t0.mssi1
-ro.mediatek.version.release=alps-mp-t0.mp1.rc-V11.20_maisui.t0mp1rc.k6985v1.64_P4
-ro.vendor.customer_logpath=/data
-ro.blackview.cr=ad7a8b2d8c221966c314ab0ea1b8f261
-ro.blackview.commit=0aa2d3a
-ro.product.board=te305
+# feat by lopestom
+ro.product.board=te305_dk_dk050_6789_t0_ru
+ro.board.platform=mt6789
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.20.2_maisui.s0mp1rc.k61v1.64.bsp_P5
+ro.vendor.mtk_trustkernel_tee_support=1
+ro.hardware.kmsetkey=trustkernel
+ro.hardware.gatekeeper=trustkernel
+ro.hardware.vulkan=mali
+ro.vendor.mediatek.platform=MT6789
+ro.hardware.egl=meow
+ro.vendor.mgk_name=mgk_64_entry_level_k510
+ro.vendor.mgvi_name=mgvi_64_armv82
+#
+ro.product.board=mgvi_64_armv82
+ro.board.platform=common
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+#
+ro.crypto.metadata.enabled=true
+ro.crypto.support_metadata_encrypt=true
+ro.crypto.uses_fs_ioc_add_encryption_key=true
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.options=::v2
+# TEE & Gatekeeper & Keymaster
+ro.tee_support=1
 ro.mtk_trustkernel_tee_support=1
-ro.mtk_tee_check_support=1
-
-ro.build.custom_int_version=TE305_DK_DK050_6789_T0_RU_V1.1.5_S231220
-ro.build.custom_version=N6000_S1_231220
-ro.internal.version=TE305_DK_DK050_6789_T0_RU_V1.1.5_S231220
+ro.vendor.mtk_trustkernel_tee_support=1
+ro.hardware.kmsetkey=trustkernel
+ro.hardware.gatekeeper=trustkernel
