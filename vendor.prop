@@ -1,0 +1,14 @@
+ro.build.description=sys_mssi_64_cn_armv82-user 13 TP1A.220624.014 1703064338 release-keys
+ro.sys.usb.storage.type=mtp
+ro.mediatek.version.branch=alps-mp-t0.mssi1
+ro.mediatek.version.release=alps-mp-t0.mp1.rc-V11.20_maisui.t0mp1rc.k6985v1.64_P4
+ro.vendor.customer_logpath=/data
+ro.blackview.cr=ad7a8b2d8c221966c314ab0ea1b8f261
+ro.blackview.commit=0aa2d3a
+ro.product.board=te305
+ro.mtk_trustkernel_tee_support=1
+ro.mtk_tee_check_support=1
+
+ro.build.custom_int_version=TE305_DK_DK050_6789_T0_RU_V1.1.5_S231220
+ro.build.custom_version=N6000_S1_231220
+ro.internal.version=TE305_DK_DK050_6789_T0_RU_V1.1.5_S231220
