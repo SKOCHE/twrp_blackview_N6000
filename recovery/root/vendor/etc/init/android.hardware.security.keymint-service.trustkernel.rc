@@ -2,4 +2,5 @@ service vendor.keymint-trustkernel /vendor/bin/hw/android.hardware.security.keym
     class early_hal
     user root
     group root
+    disabled
     seclabel u:r:recovery:s0
