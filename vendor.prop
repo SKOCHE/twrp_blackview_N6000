@@ -1,5 +1,5 @@
 # feat by lopestom
-ro.product.board=te305_dk_dk050_6789_t0_ru
+ro.product.board=mgvi_64_armv82
 ro.board.platform=mt6789
 ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_emmc_support=1
