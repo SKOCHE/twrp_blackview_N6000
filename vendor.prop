@@ -1,6 +1,6 @@
 # feat by lopestom
-ro.product.board=te305_dk_dk050_6789_t0_ru
-ro.board.platform=mt6789
+#ro.product.board=te305_dk_dk050_6789_t0_ru
+#ro.board.platform=mt6789
 ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_emmc_support=1
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
@@ -14,8 +14,8 @@ ro.hardware.egl=meow
 ro.vendor.mgk_name=mgk_64_entry_level_k510
 ro.vendor.mgvi_name=mgvi_64_armv82
 #
-ro.product.board=mgvi_64_armv82
-ro.board.platform=common
+#ro.product.board=mgvi_64_armv82
+#ro.board.platform=common
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 #
