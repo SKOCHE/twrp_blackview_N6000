@@ -1,21 +1,6 @@
-# feat by lopestom
-# Fstab
-ro.postinstall.fstab.prefix=/system
+# feat by SK
 # USB MTP
 ro.sys.usb.storage.type=mtp
-# identity
-Build.BRAND=MTK
-ro.hardware.egl=meow
-ro.sf.lcd_density=240
-ro.soc.manufacturer=Mediatek
-ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
-ro.vendor.mediatek.version.release=alps-mp-s0.mp1-V15.20.2
-ro.vendor.mediatek.platform=MT6789
-ro.vendor.mtk_f2fs_enable=0
-ro.vendor.mtk_emmc_support=1
-ro.hardware.egl=meow
-#ro.blackview.commit=96b8dfa
-#ro.blackview.cr=ad7a8b2d8c221966c314ab0ea1b8f261
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 #
@@ -25,14 +10,18 @@ ro.crypto.uses_fs_ioc_add_encryption_key=true
 ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.options=::v2
+persist.service.debuggable=1
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+persist.service.adb.enable=1			   
+
 # TEE & Gatekeeper & Keymaster
 ro.tee_support=1
 ro.mtk_trustkernel_tee_support=1
 ro.vendor.mtk_trustkernel_tee_support=1
 ro.hardware.kmsetkey=trustkernel
-ro.hardware.gatekeeper=trustkernel
-# snapshot
-ro.virtual_ab.userspace.snapshots.enabled=true
-init.userspace_reboot.is_supported=true
 
-persist.service.debuggable=1
+# Platform
+ro.vendor.mediatek.platform=MT6789
