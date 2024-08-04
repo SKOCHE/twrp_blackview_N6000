@@ -35,28 +35,6 @@ on property:vendor.sys.listener.registered=true
     start vendor.keymint-trustkernel
     start keymaster_attestation-1-1
 
-on property:hwservicemanager.ready=true
-# trustkernel tee patch start
-    start vendor.keymint-trustkernel
-# trustkernel tee patch end
-    start vendor.gatekeeper-1-0
-    start keymaster_attestation-1-1
-
-on property:ro.crypto.state=unsupported
-    stop teed
-    stop vendor.keymint-trustkernel
-    stop vendor.gatekeeper-1-0
-
-on property:ro.crypto.state=unencrypted
-    stop teed
-    stop vendor.keymint-trustkernel
-    stop vendor.gatekeeper-1-0
-
-on property:twrp.decrypt.done=true
-    stop teed
-    stop vendor.keymint-trustkernel
-    stop vendor.gatekeeper-1-0
-
 on boot
     start boot-hal-1-2
     start health-hal-2-1
