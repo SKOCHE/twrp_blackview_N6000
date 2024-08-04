@@ -31,3 +31,4 @@ ro.mtk_trustkernel_tee_support=1
 ro.vendor.mtk_trustkernel_tee_support=1
 ro.hardware.kmsetkey=trustkernel
 ro.hardware.gatekeeper=trustkernel
+keymaster_ver=4.1
