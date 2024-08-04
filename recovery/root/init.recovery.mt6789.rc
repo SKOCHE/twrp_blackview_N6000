@@ -128,16 +128,6 @@ on post-fs-data
     mkdir /data/vendor_de/0 0770 system system
     mkdir /data/vendor/hardware 0771 root root
 
+ on boot
     start health-hal-2-1
     setprop sys.usb.config adb
-
- on boot
-    mkdir /mnt/vendor/persist
-    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
-    mkdir /mnt/vendor/protect_f
-    mkdir /mnt/vendor/protect_s
-    mount ext4 /dev/block/by-name/protect1 /mnt/vendor/protect_f rw
-    mount ext4 /dev/block/by-name/protect2 /mnt/vendor/protect_s rw
-    mkdir /mnt/vendor/persist/t6_twrp
-    mkdir /mnt/vendor/protect_f/tee_twrp
-    exec u:r:recovery:s0 system -- /vendor/bin/trustkernel.twrp.sh
