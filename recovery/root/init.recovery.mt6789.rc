@@ -1,10 +1,5 @@
-#import /init.recovery.trustkernel.rc
+import /init.recovery.trustkernel.rc
 import /vendor/etc/init/trustkernel.rc
-#import /vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
-# trustkernel tee patch start
-#import /vendor/etc/init/android.hardware.security.keymint-service.trustkernel.rc
-# trustkernel tee patch end
-#import /init.recovery.project.rc
 
 on init
     setprop sys.usb.configfs 1
@@ -127,7 +122,3 @@ on post-fs-data
     mkdir /data/vendor_de 0770 system system
     mkdir /data/vendor_de/0 0770 system system
     mkdir /data/vendor/hardware 0771 root root
-
- on boot
-    start health-hal-2-1
-    setprop sys.usb.config adb
